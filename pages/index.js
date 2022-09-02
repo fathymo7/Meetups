@@ -14,7 +14,7 @@ const dummy_MeetUps = [
     title: "A second meetup",
     image:
       "https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D8%AC_%D8%A8%D9%8A%D8%B2%D8%A7_%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D9%84#/media/%D9%85%D9%84%D9%81:The_Leaning_Tower_of_Pisa_SB.jpeg",
-    address: "Rome",
+    address: "Napoli",
     description: "this is a second meetup",
   },
 ];
@@ -28,6 +28,7 @@ export async function getStaticProps() {
     props: {
       meetups: dummy_MeetUps,
     },
+    revalidate: 1,
   };
 }
 export default HomePage;
